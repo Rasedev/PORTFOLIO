@@ -1,0 +1,6 @@
+@media (min-width: 576px) {
+    .menu {
+        width: 50%;
+        max-width: 32rem;
+    }
+}

@@ -1,0 +1,266 @@
+/*//////////////////////// Projects////////////////////// */
+
+
+.ProjectBox {
+    height: 40%;
+    width: 45%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    border-radius: 10%;
+    background: rgba(240, 239, 239, 0.4);
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    
+   
+  }
+  /* // .ProjectBox::after {
+  //     content: "";
+  //     height: 100%;
+  //     width: 100%;
+  //     background-image: url("https://upload.wikimedia.org/wikipedia/he/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png");
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //     background-position: center;
+  //     position: absolute;
+  //     left: -35%;
+  //     opacity: 0.1;
+  //     // top: 45px;
+  //   }
+  //  .ProjectBox ::before {
+  //     content: "";
+  //     height: 100%;
+  //     width: 100%;
+  //     background-image: url("http://pluspng.com/img-png/nodejs-png-part-4-node-js-execution-time-800.png");
+  //     background-size: contain;
+  //     background-repeat: no-repeat;
+  //     background-position: center;
+  //     position: absolute;
+  //     bottom: -40%;
+  //     left: 20%;
+  //     opacity: 0.1;
+      
+  //   @media (max-width: 900px) {
+  //     width: 70%;
+  //   }
+  
+  //   } */
+  
+  .ProjectHeader {
+    font-family: 'Kalam', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+     height: 5%;
+    /* // height: 30px; */
+    text-decoration: underline;
+    font-weight: 600;
+    color: #10316b;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+  }
+  
+  .ProjectBody {
+     height: 80%;
+     width: 100%;
+     display: flex;
+     z-index: 2;
+     justify-content: space-between;
+    /* //  overflow: hidden;
+    //   overflow-y: auto;
+    //   -webkit-overflow-scrolling: touch; */
+  }
+  .ProjectDescription {
+    width: 60%;
+    height: 100%;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+     flex-wrap: wrap;
+    white-space: pre-line;
+    font-size: 1rem;
+    line-height: 18px;
+    overflow-y: auto;
+    color: black;
+  }
+  
+  .LinksBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    color: black;
+  }
+  .StyledLink {
+    color: black;
+    text-decoration: none;
+  }
+  .StyledLink:hover {
+    cursor: pointer;
+  }
+  .LinkIcon {
+    font-size: 1.3rem;
+  }
+  .anLink {
+    color: black;
+    text-decoration: none;
+  
+   
+  }
+  .anLink :hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  .GitIcon {
+    font-size: 1.3rem;
+   
+  }
+  
+  .ProjectPhoneImg {
+    background-image: url("http://www.sfu.ca/~weibinw/RP_for_testingA/images/iphone_frame_for_desktop_view/u0.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 30%;
+    position: relative;
+  }
+    /* .ProjectGif {
+     position: absolute;
+     top: 10%;
+     transform: translateX(-47%);
+     left: 47%;
+     height: 78%;
+     width: 84%;
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-position: center;
+    background-image: ${({ projectGif }) =>projectGif ? `url(${projectGif})` : null}; 
+      
+   } */
+  
+   .ProjectGif {
+    position: absolute;
+    top: 10%;
+    transform: translateX(-47%);
+    left: 47%;
+    height: 78%;
+    width: 84%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+  }
+  
+  .ProjectsWrapper {
+    height: 130vh;
+    width: 82%;
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: futura-pt, sans-serif;
+    font-weight: 800;
+    background: linear-gradient(to bottom, #29323c, #2c5364);
+    background-image: url("../../../assets/3.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0 50px 50px 0;
+    box-shadow: 6px 22px 72px 1px rgba(255, 255, 255, 0.65);
+    
+  }
+  .ProjectsBox {
+    height: 85%;
+    width: 85%;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    box-shadow: 41px 41px 82px #000000, -41px -41px 82px #29323c; 
+     box-shadow: 41px 41px 82px #29323c, -41px -41px 82px #000000;
+  }
+  
+  .ProjectsHeader {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    color: #0f4c75;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+  
+  .AllProjects {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    border-radius: 50px;
+  
+    /* border: 1px solid black; */
+  }
+  
+  .navbar-brand canvas {
+    width: 100%;
+    max-width: 500px !important;
+    max-height: 180px !important;
+    margin: -30px auto 0;
+    display: block;
+  }
+  
+  /* Navbar responsive */
+  
+  @media screen and (max-width: 768px) {
+    .navbar-start,
+    .navbar-end {
+      display: none;
+      width: 100% !important;
+    }
+  
+    .navbar-center {
+      display: none;
+    }
+  
+    #video-bg{
+      height: 100%;
+      z-index: -1;
+  
+    }
+    .dropdown .dropdown-content {
+     
+     transform: translateX(-180px) !important;
+    }
+    .hero-title {
+      right: 50%;
+   }
+  
+  .blend_0 {
+    position: absolute;
+    top: 40%;
+    left: 55px;
+   }
+   .navbar-brand canvas {
+    width: 100%;
+    max-width: 130px !important;
+    max-height: 100px !important;
+    margin: -30px auto 0;
+    display: block !important;
+    transform: translate(5%, -50%) !important;
+  }
+  .blend_2 {
+    top: 200px !important;
+  }
+
+  }
+  
+  
+  

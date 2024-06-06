@@ -1,0 +1,192 @@
+:root{
+    --color-primary: #4db5ff;
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-light: rgba(255, 255, 255, 0.6);
+    --transition: all 400ms ease;
+    --test-width-lg: 75%;
+    --test-width-md: 86%;
+    --test-width-sm: 90%;
+}
+#contact{
+    background:linear-gradient(#00000080, #00000080), url(../../../assets/contactsd.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    padding: 50px 8%;
+}
+.test {
+  width:var(--test-width-lg);
+  margin: 0 auto;
+}
+.contact__test {   
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+    margin: 0 auto;
+  }
+  .contact__options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .contact__option {
+    background: transparent;
+    color: #fff;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid var(--color-primary-variant);
+    transition: var(--transition);
+  }
+  .contact__option:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+  }
+  .contact__option-icon {
+    font-size: 1.5rem;
+    margin: 1rem auto;
+  }
+  .contact__option a {
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+  }
+  /* ================ FORM ================= */
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 1.5rem !important;
+    /* border-radius: 0.5rem; */
+    background: transparent;
+    border-bottom: 1px solid var(--color-primary-variant);
+    resize: none;
+    color: #fff;
+  }
+  #contact h5{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 5rem;
+  }
+  
+  #contact h1{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* ================ MEDIA QUERIES (MEDIUM DEVICES) ============= */
+  
+  @media screen and (max-width: 1024px) {
+    .contact__test {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+  /* ================ MEDIA QUERIES (SMALL DEVICES) ============= */
+  @media screen and (max-width: 600px) {
+    .contact__test {
+      width: var(--container-width-sm);
+    }
+  }
+  
+
+  /* Button-4 */
+
+  .button-container-4{
+    position: relative;
+    width: 250px;
+    height: 50px;    
+    margin-top: 8vh;
+    overflow: hidden;
+    border: 1px solid #4db5ff;
+    transition: 0.5s;    
+  }
+  .button-container-4 button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #4db5ff ;
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    -webkit-animation: ani2 0.7s steps(22) forwards;
+    animation: ani2 0.7s steps(22) forwards;
+  }
+  .button-container-4 button:hover{
+  background: #4db5ff!important;
+  -webkit-animation: ani 0.7s steps(22) forwards;
+  animation: ani 0.7s steps(22) forwards;
+  color: #fff !important;
+  }
+  
+  .contact_mas {
+    color: #4db5ff;
+    position: absolute;
+    top: 28%;
+    text-align: center;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 1px;   
+  }
+
+  @-webkit-keyframes ani {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
+  
+  @keyframes ani {
+    from {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+    to {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+  }
+  
+  @-webkit-keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+  
+  @keyframes ani2 {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+    to {
+      -webkit-mask-position: 0 0;
+      mask-position: 0 0;
+    }
+  }
+  
