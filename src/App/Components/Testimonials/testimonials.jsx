@@ -39,10 +39,10 @@ const Testimonials = () => {
                 <div className="auth-img">
                   <Swiper
                     effect="cube"
-                    // autoplay={{
-                    //   delay: 2500,
-                    //   disableOnInteraction: false,
-                    // }}
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }}
                     grabCursor={true}
                     cubeEffect={{
                       shadow: true,
@@ -72,10 +72,10 @@ const Testimonials = () => {
               
               <Swiper
                 effect="cube"
-                // autoplay={{
-                //   delay: 2500,
-                //   disableOnInteraction: false,
-                // }}
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
                 grabCursor={true}
                 cubeEffect={{
                   shadow: true,
