@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+ import React, { useEffect } from "react";
 import Expreience from "../Components/Experience/Experience";
 import "./Services.css";
 import CountUp from "react-countup";
@@ -39,8 +39,8 @@ const Services = () => {
 
   return (
     <div id="services">
-      <div className="container sectio nav" style={{ position: "relative" }}>
-        <div className="views">
+      {/* <div className="container sectio nav" style={{ position: "relative" }}> */}
+      <div className="section nav " >
           <h1 className="">WHAT SKILLS I HAVE</h1>
          
           <h3 className="span loader font-Roboto">
@@ -69,13 +69,15 @@ const Services = () => {
             <span className="m">E</span>
             <span className="m">S</span>
           </h3>
+        
           <Expreience />
-        </div>
+        
+        
+         
       </div>
-      <div className="">
-            <div className="flex flex-wrap">
+            <div className="s_count flex flex-wrap">
               {counters.map((counter, index) => (
-                <div key={index} className="w-full md:w-1/4 p-5">
+                <div key={index} className="item w-full md:w-1/4 p-5 md:mx-auto">
                   <div className="c-counter text-center">
                     <span className="count-2 text-3xl font-bold">
                       <CountUp
@@ -84,12 +86,12 @@ const Services = () => {
                         suffix={counter.suffix || " +"}
                       />
                     </span>
-                    <p className="text-[#fff] font-pops mt-2">{counter.text}</p>
+                    <p className="text-[#fff] font-pops mt-2 ">{counter.text}</p>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
+      
     </div>
   );
 };

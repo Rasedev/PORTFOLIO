@@ -13,12 +13,12 @@ class Contact extends Component {
     e.preventDefault();
 
     emailjs
-    //   .sendForm(
-    //     "YOUR_SERVICE_ID",
-    //     "YOUR_TEMPLATE_ID",
-    //     this.form.current,
-    //     "YOUR_USER_ID"
-    //   )
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        this.form.current,
+        "YOUR_USER_ID"
+      )
       .then(
         (result) => {
           console.log(result.text);
@@ -39,39 +39,42 @@ class Contact extends Component {
           <div className="contact__options">
             <div className="contact__option">
               <MdOutlineEmail className="contact__option-icon" />
-              <h4>Email</h4>
-              <h6>russell233957@gmail.com</h6>
-              <a href="mailto:russell233957@gmail.com">Send a message</a>
+              <h4 className="font-lato text-[1rem] font-medium">Email</h4>
+              <h6 className="font-lato text-[1rem] font-medium">russell233957@gmail.com</h6>
+              <a className="font-lato" href="mailto:russell233957@gmail.com">Send a message</a>
             </div>
             <div className="contact__option">
               <RiMessengerLine className="contact__option-icon" />
-              <h4>Messenger</h4>
-              <h6>Aminul Islam Russell </h6>
-              <a href="https://m.me">Send a message</a>
+              <h4 className="font-lato text-[1rem] font-medium">Messenger</h4>
+              <h6 className="font-lato text-[1rem] font-medium">Aminul Islam Russell </h6>
+              <a className="font-lato" href="https://m.me">Send a message</a>
             </div>
             <div className="contact__option">
               <RiWhatsappLine className="contact__option-icon" />
-              <h4>Whatsapp</h4>
-              <h6>+880 1717233957</h6>
-              <a href="https://api.whatsapp.com/send?phone=880 1717233957">
+              <h4 className="font-lato text-[1rem] font-medium">Whatsapp</h4>
+              <h6 className="font-lato text-[1rem] font-medium">+880 1717233957</h6>
+              <a className="font-lato " href="https://api.whatsapp.com/send?phone=880 1717233957">
                 Send a message
               </a>
             </div>
           </div>
           <form ref={this.form} onSubmit={this.sendEmail} action="">
             <input
+            className="font-lato"
               type="text"
               name="name"
               placeholder="Your Full Name"
               required
             />
             <input
+            className="font-lato"
               type="email"
               name="email"
               placeholder="Your Email"
               required
             />
             <textarea
+            className="font-lato"
               name="message"
               rows="5"
               placeholder="Your Message"

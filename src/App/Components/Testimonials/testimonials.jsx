@@ -34,15 +34,15 @@ const Testimonials = () => {
             
               <div className="auth-wrapper">
                 <div className="quote">
-                  <BiSolidQuoteAltLeft className="text-center absolute top-[25%] left-[24%]" />
+                  <BiSolidQuoteAltLeft className="icon text-center absolute top-[25%] left-[24%]" />
                 </div>
                 <div className="auth-img">
                   <Swiper
                     effect="cube"
-                    autoplay={{
-                      delay: 2500,
-                      disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //   delay: 2500,
+                    //   disableOnInteraction: false,
+                    // }}
                     grabCursor={true}
                     cubeEffect={{
                       shadow: true,
@@ -72,10 +72,10 @@ const Testimonials = () => {
               
               <Swiper
                 effect="cube"
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
+                // autoplay={{
+                //   delay: 2500,
+                //   disableOnInteraction: false,
+                // }}
                 grabCursor={true}
                 cubeEffect={{
                   shadow: true,

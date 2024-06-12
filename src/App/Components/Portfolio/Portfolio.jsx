@@ -209,7 +209,7 @@ const Portfolio = () => {
           {portfolioItems.map((item) => (
             <div key={item.id} className="portfolio-box ">
               <div
-                className="p-box"
+                className="p-box max-[320px]:pb-[84%]"
                 onMouseEnter={() => handleMouseEnter(item.id)}
                 onMouseLeave={handleMouseLeave}
               >

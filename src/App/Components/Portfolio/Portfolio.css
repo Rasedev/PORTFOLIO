@@ -1,5 +1,11 @@
 
-
+/* body,
+::after,
+::before {
+  box-sizing: border-box !important;
+  padding: 0px !important;
+  margin: 0px !important;
+} */
 
 #portfolio {
   background: url(/src/assets/projects.jpg);
@@ -10,6 +16,7 @@
   z-index: 4;
   transform: translate3d(0px, 0px, 0px);
   padding: 100px 8%;
+  
 }
 .portfolio-box {
   position: relative;
@@ -19,7 +26,7 @@
 
 .p-box {
   display: block;
-  padding-bottom: 30%;
+  padding-bottom: 80%;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background-position: top center;
@@ -42,9 +49,9 @@
 
 
 @media (min-width: 768px) {
-  .p-box {
+  /* .p-box {
     padding-bottom: 81%;
-  }
+  } */
 }
 
 /* .p-box:hover .layer {
@@ -232,4 +239,58 @@
 }  
 
 
+/* ///////////// Responsive //////////// */
 
+@media only screen and (max-width: 575.98px) {
+  #portfolio {
+    max-width: 100%;
+    height: auto;
+    background: url(/src/assets/projects.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    object-fit: cover;
+    
+  }
+  .portfolio-box {
+    position: relative;
+    height: 201px;
+    overflow: visible;
+    margin-bottom: 30px;
+  }
+  .p-box { 
+    padding-bottom: 71%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;    
+  }
+  
+  }
+  
+  
+  
+  
+  @media (min-width: 576px) and (max-width: 768px) {
+    #portfolio {
+      max-width: 100%;
+      height: auto;     
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      object-fit: cover;
+      padding: 30px 5%;
+  }
+  .portfolio-box {
+    position: relative;
+    height: 221px;
+    
+  }
+  .p-box {
+    padding-bottom: 70%;
+   
+  }
+  .inner {
+    width: 100%;
+    padding: 2rem 1.9rem;
+    height: 100%;
+  }
+}
