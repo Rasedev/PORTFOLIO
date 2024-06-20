@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900');
+
+/* Animation Styles */
+
+.font-play {
+  font-family: 'Red Hat Display', sans-serif;
+  
+}
+
+.phone {
+  position: relative;
+  width: 100%;
+  height: 112vh; /* Adjust this as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iphone {
+  width: 100%;
+  max-width: 350px; /* Adjust this as needed */
+  height: 80%; /* Adjust this as needed */
+  position: absolute;
+  top: 10%;
+  right: 16%;
+  overflow: hidden;
+  transform: rotate(45deg);
+  
+}
+
+.outer {
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 0;
+  animation: dash 8s linear 3;
+}
+
+.inner {
+  stroke-dasharray: 5000;
+  stroke-dashoffset: 0;
+  animation: dash 6s linear 3;
+}
+
+.screen {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 0;
+  animation: dashscreen 3s linear 3;
+}
+
+.homebutton {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 0;
+  animation: dashscreen 20s linear 3;
+}
+
+.lock, .vol1, .vol2, .vol3 {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 0;
+  animation: dashlock 4s linear 3;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 5000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dashscreen {
+  0% {
+    stroke-dashoffset: 2000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dashlock {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* /////////////TEXT/////////////////////// */
+
+
+
+svg text {
+	text-transform: uppercase;
+	animation: stroke 5s infinite alternate;
+	stroke-width: 1;
+	stroke: #333;
+	font-size: 4vw;
+  font-weight: 900;
+}
+@keyframes stroke {
+  0% {
+    fill: rgba(255, 255, 255, 0); /* White with 0 opacity */
+    stroke: rgba(255, 255, 255, 0.7); /* White stroke */
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(255, 255, 255, 0); /* White with 0 opacity */
+    stroke: rgba(10, 10, 10, 1); /* White stroke */
+    /* stroke: rgba(255, 255, 255, 0.7);  */
+  }
+  80% {
+    fill: rgba(255, 255, 255, 0); /* White with 0 opacity */
+    stroke: rgba(255, 255, 255, 0.7); /* White stroke */
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgba(255, 255, 255, 1); /* Fully opaque white */
+    stroke: rgba(255, 255, 255, 0.7); /* White stroke */
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900');
+
+.console-container {
+  font-size: 3.5vw;
+  /* display: flex; */
+  align-items: center;
+  height: 200px;
+  
+}
+
+.console-underscore {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  color: #0a0a0a;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+
+
+.live_u {
+  mix-blend-mode: difference;
+  z-index: 3;
+  /* font-size: 4vw; */
+  font-family: 'Red Hat Display', sans-serif;
+  line-height: 3vw;
+  margin: 0;
+  font-weight: 900 !important;
+  background: url(https://raw.githubusercontent.com/s1mpson/-/master/codepen/black-lives-matter/victim-collage.png);
+  background-size: 40%;
+  background-position: 50% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0.08) !important;
+  animation: zoomout 10s ease 500ms infinite;
+}
+
+@keyframes zoomout {
+  from {
+    background-size: 40%;
+  }
+  to {
+    background-size: 10%;
+  }
+}
+
+

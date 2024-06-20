@@ -23,7 +23,9 @@ export default {
         Josefin: ["Josefin Sans", "sans-serif"],
         works: ["Work Sans", "sans-serif"],
         Roboto: ["ROBOTO", "sans-serif"],
-        
+        karla: ["Karla", "sans-serif"],
+        Hat: ["Red Hat Display", "sans-serif"],
+       
       },
       fontWeight: {
         thin: "100",

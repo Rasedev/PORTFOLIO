@@ -1,444 +1,111 @@
 
-
-
-/*////////////////////////// Banner ///////////////////////*/
-
- 
-  .blend {
-    mix-blend-mode: difference!important;
-    color: #efefef;
-    position: relative;
-    z-index: 2;
-    
+/* /////////////////////////// Banner //////////////////////// */
+:root {
+  --black: #000;
+  --white: #fff;
 }
+
+.banner {
+  width: 100%;
+  height: 112vh;
+  position: relative;
+  background: linear-gradient(900deg, var(--black), var(--white) 90%); 
+}
+
+.hero-title {
+position: absolute;
+top: 40%;
+left: 17%;
+padding:0px 10px;
+font-weight: 900;
+font-size: 3.5vw;
+line-height: 3vw !important;
+color: #0a0a0a;
+}
+
+.Text {
+  mix-blend-mode: difference;
+  z-index: 3;
+  filter: invert(1);
+  margin: 0;
+  background: url(https://raw.githubusercontent.com/s1mpson/-/master/codepen/black-lives-matter/victim-collage.png);
+  background-size: 40%;
+  background-position: 50% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  animation: zoomout 10s ease 500ms infinite;
+  color: #00000000;
+}
+
+@keyframes zoomout {
+  from {
+    background-size: 40%;
+  }
+  to {
+    background-size: 10%;
+  }
+}
+
+
 .blend_2{
   position:absolute;
   mix-blend-mode: difference;
   z-index: 3;
   filter: invert(1);
-  border:5px solid black;
-  padding:5px 30px;
-  top: 55%;
-  left: 17%;
-  font-size: 1.3rem;
-}
-
-
-/* Banner.css */
-
-.video-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
- 
-}
-
-#video-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: rotate(180deg);
-}
-
-/* .content {
-  min-height: 100vh;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: rgb(169, 30, 30); 
-} */
-
-
-.banner_particle{
-
-  position: absolute;
-  top: 10%;
-
-}
-
-
-/* BTN */
-
-.hero-title  {
-  position: absolute;
-  mix-blend-mode: difference ;
-  z-index: 3;
-  filter: invert(1);
-  /* border: 5px solid black; */
-  top: 25%;
-  left: 17%;
-  font-size: 5vw;
-  font-weight: 900;
-}
-
-.hero-title a {
-  position: relative;
-  display: flex;
-  padding: 8px 20px;
-  color: #0a0a0a;
-  text-decoration: none;
-  overflow: hidden;
-  transition: .5s;
-  letter-spacing: 4px;
-}
-.hero-title a:hover {
-background: #0000;
-color: #000;
-border-radius: 5px;
-}
-
-.hero-title  a span {
-position: absolute;
-display: block;
-}
-
+  padding: 15px 8px;
+  top: 52%;
+  left: 17%; 
+  height: 200px; 
   
-.content a span:nth-child(1) {
-position: absolute;  
-top: 0;
-left: -100%;
-width: 100%;
-height: 5px;
-/* background: linear-gradient(90deg, transparent, #03e9f4); */
-background: linear-gradient(270deg, #ff0266, #03e9f4);
-animation: hero-title-anim1 1s linear infinite;
-}
-
-@keyframes hero-title-anim1 {
-0% {
-  left: -100%;
-}
-50%,100% {
-  left: 100%;
-}
-}
-
-.content a span:nth-child(2) {
-position: absolute;  
-top: -100%;
-right: 0;
-width: 5px;
-height: 100%;
-background: linear-gradient(180deg, transparent, #03e9f4);
-animation: hero-title-anim2 1s linear infinite;
-animation-delay: .25s
-}
-
-@keyframes hero-title-anim2 {
-0% {
-  top: -100%;
-}
-50%,100% {
-  top: 100%;
-}
-}
-
-.content a span:nth-child(3) {
-position: absolute;  
-bottom: 0;
-right: -100%;
-width: 100%;
-height: 5px;
-background: linear-gradient(90deg, #0a0a0a, #0a0a0a);
-/* background: linear-gradient(270deg, transparent, #03e9f4); */
-animation: hero-title-anim3 1s linear infinite;
-animation-delay: .5s
-}
-
-@keyframes hero-title-anim3 {
-0% {
-  right: -100%;
-}
-50%,100% {
-  right: 100%;
-}
-}
-
-.content a span:nth-child(4) {
-position: absolute;  
-bottom: -100%;
-left: 0;
-width: 5px;
-height: 100%;
-background: linear-gradient(360deg, transparent, #03e9f4);
-animation: hero-title-anim4 1s linear infinite;
-animation-delay: .75s
-}
-
-@keyframes hero-title-anim4 {
-0% {
-  bottom: -100%;
-}
-50%,100% {
-  bottom: 100%;
-}
-}
-
-
-/* Responsive ////////////////////////////////*/
-
-
-  
-  @media only screen and (max-width: 575.98px) {
-    .hero-title {
-      font-size: 7vw;
-      font-weight: 900;
-      position: absolute;
-      mix-blend-mode: difference;
-      z-index: 3;
-      filter: invert(1);
-      top: 35%;
-      left: 17%;
-      transform: translate(0%)
-    }
-  
-    .hero-title a {
-      display: flex;
-      padding: 8px 20px;
-      color: #0a0a0a;
-      text-decoration: none;
-      overflow: hidden;
-      transition: 0.5s;
-      letter-spacing: 4px;
-      position: relative;
-     
-    }
-  
-    .hero-title a:hover {
-      background: #0000;
-      color: #000;
-      border-radius: 5px;
-    }
-  
-    .hero-title a span {
-      position: absolute;
-      display: block;
-    }
-  .blend_2{
-  position:absolute;
-  mix-blend-mode: difference;
-  z-index: 3;
-  filter: invert(1);
-  border:5px solid black;
-  padding:5px 30px;
-  top: 55%;
-  left: 17%;
-  font-size: 1.3rem;
-}
-    .content a span:nth-child(1) {
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(270deg, #ff0266, #03e9f4);
-      animation: hero-title-anim1 1s linear infinite;
-    }
-  
-    @keyframes hero-title-anim1 {
-      0% {
-        left: -100%;
-      }
-      50%,
-      100% {
-        left: 100%;
-      }
-    }
-  
-    .content a span:nth-child(2) {
-      top: -100%;
-      right: 0;
-      width: 5px;
-      height: 100%;
-      background: linear-gradient(180deg, transparent, #03e9f4);
-      animation: hero-title-anim2 1s linear infinite;
-      animation-delay: 0.25s;
-    }
-  
-    @keyframes hero-title-anim2 {
-      0% {
-        top: -100%;
-      }
-      50%,
-      100% {
-        top: 100%;
-      }
-    }
-  
-    .content a span:nth-child(3) {
-      bottom: 0;
-      right: -100%;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(90deg, #0a0a0a, #0a0a0a);
-      animation: hero-title-anim3 1s linear infinite;
-      animation-delay: 0.5s;
-    }
-  
-    @keyframes hero-title-anim3 {
-      0% {
-        right: -100%;
-      }
-      50%,
-      100% {
-        right: 100%;
-      }
-    }
-  
-    .content a span:nth-child(4) {
-      bottom: -100%;
-      left: 0;
-      width: 5px;
-      height: 100%;
-      background: linear-gradient(360deg, transparent, #03e9f4);
-      animation: hero-title-anim4 1s linear infinite;
-      animation-delay: 0.75s;
-    }
-  
-    @keyframes hero-title-anim4 {
-      0% {
-        bottom: -100%;
-      }
-      50%,
-      100% {
-        bottom: 100%;
-      }
-    }
   }
 
 
-  @media (min-width: 576px) and (max-width: 768px) {
-    #video-bg{
-      width: 100%;
-    }
-    .hero-title {
-      font-size: 7vw;
-      font-weight: 900;
-      position: absolute;
-      mix-blend-mode: difference;
-      z-index: 3;
-      filter: invert(1);
-      top: 35%;
-      left: 17%;
-      transform: translate(0%)
-    }
   
-    .hero-title a {
-      display: flex;
-      padding: 8px 20px;
-      color: #0a0a0a;
-      text-decoration: none;
-      overflow: hidden;
-      transition: 0.5s;
-      letter-spacing: 4px;
-      position: relative;
-     
-    }
-  
-    .hero-title a:hover {
-      background: #0000;
-      color: #000;
-      border-radius: 5px;
-    }
-  
-    .hero-title a span {
-      position: absolute;
-      display: block;
-    }
-  .blend_2{
-  position:absolute;
-  mix-blend-mode: difference;
-  z-index: 3;
-  filter: invert(1);
-  border:5px solid black;
-  padding:5px 30px;
-  top: 55%;
-  left: 17%;
-  font-size: 1.3rem;
-}
-    .content a span:nth-child(1) {
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(270deg, #ff0266, #03e9f4);
-      animation: hero-title-anim1 1s linear infinite;
-    }
-  
-    @keyframes hero-title-anim1 {
-      0% {
-        left: -100%;
-      }
-      50%,
-      100% {
-        left: 100%;
-      }
-    }
-  
-    .content a span:nth-child(2) {
-      top: -100%;
-      right: 0;
-      width: 5px;
-      height: 100%;
-      background: linear-gradient(180deg, transparent, #03e9f4);
-      animation: hero-title-anim2 1s linear infinite;
-      animation-delay: 0.25s;
-    }
-  
-    @keyframes hero-title-anim2 {
-      0% {
-        top: -100%;
-      }
-      50%,
-      100% {
-        top: 100%;
-      }
-    }
-  
-    .content a span:nth-child(3) {
-      bottom: 0;
-      right: -100%;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(90deg, #0a0a0a, #0a0a0a);
-      animation: hero-title-anim3 1s linear infinite;
-      animation-delay: 0.5s;
-    }
-  
-    @keyframes hero-title-anim3 {
-      0% {
-        right: -100%;
-      }
-      50%,
-      100% {
-        right: 100%;
-      }
-    }
-  
-    .content a span:nth-child(4) {
-      bottom: -100%;
-      left: 0;
-      width: 5px;
-      height: 100%;
-      background: linear-gradient(360deg, transparent, #03e9f4);
-      animation: hero-title-anim4 1s linear infinite;
-      animation-delay: 0.75s;
-    }
-  
-    @keyframes hero-title-anim4 {
-      0% {
-        bottom: -100%;
-      }
-      50%,
-      100% {
-        bottom: 100%;
-      }
-    }
+/* Responsive */
+
+@media only screen and (max-width: 575.98px) {
+  .hero-title {
+    font-size: 7vw;
+    font-weight: 900;
+    top: 35%;
+    left: 17%;
   }
+
+  .hero-title a {
+    padding: 8px 20px;
+  }
+
+  .blend_2 {
+    border: 5px solid black;
+    padding: 5px 30px;
+    top: 55%;
+    left: 17%;
+    font-size: 1.3rem;
+    
+  }
+
   
+}
 
+@media (min-width: 576px) and (max-width: 768px) {
+  .hero-title {
+    font-size: 7vw;
+    top: 35%;
+    left: 17%;
+  }
 
+  .hero-title a {
+    padding: 8px 20px;
+  }
+
+  .blend_2 {
+    border: 5px solid black;
+    padding: 5px 30px;
+    top: 55%;
+    left: 17%;
+    font-size: 1.3rem;
+  }
+
+  
+}

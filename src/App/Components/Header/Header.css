@@ -1,6 +1,66 @@
+/* @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+.navbar {
+  position: fixed;
+  z-index: 30;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--navbar-padding, 1.1rem) !important;
+  /* border-bottom: 0.1px solid #e5e5e5; */
+  /* background:linear-gradient(90deg, rgb(250, 255, 255), transparent, rgb(240, 240, 240)); */
+  /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%, transparent); */
+}
+.live {
+  font-size: 3.5vw;
+  line-height: 4vw;
+  margin: 0;
+  font-weight: 900;
+  background: url(https://raw.githubusercontent.com/s1mpson/-/master/codepen/black-lives-matter/victim-collage.png);
+  background-size: 40%;
+  background-position: 50% 50%;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,0.08);
+  animation: zoomout 10s ease 500ms 1;
+}
+
+@keyframes zoomout {
+  from {
+    background-size: 40%;
+  }
+  to {
+    background-size: 10%;
+  }
+}
+
+
+.blend_2{
+  mix-blend-mode: difference;
+  z-index: 3;
+  filter: invert(1);
+  padding:0px 10px;
+  font-size: 2vw;
+  font-family: tahoma;
+  }
+
+
+
 @media (min-width: 576px) {
     .menu {
-        width: 50%;
+        width: 100%;
         max-width: 32rem;
     }
 }
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .dropdown{
+    left: 63px; 
+  }
+  }
