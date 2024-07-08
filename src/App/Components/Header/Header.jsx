@@ -34,9 +34,9 @@ const Header = () => {
           <a href="" className="contact-number mt-[10px] font-medium">
             +880 17172 33957
           </a>
-          <a href="" className="contact-number mt-[10px] font-medium">
+          {/* <a href="" className="contact-number mt-[10px] font-medium">
           raselmuy@gmail.com
-          </a>
+          </a> */}
         </div>
 
         <div className="navbar-end flex relative">
