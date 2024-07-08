@@ -7,9 +7,9 @@ import "./Testimonials.css";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
 import { Autoplay, EffectCube, Pagination } from "swiper/modules";
 //import TreeComponent from "./../Tree/TreeComponent";
-import slide0 from "../../../assets/R0.png"
-import slide1 from "../../../assets/R1.png"
-import slide2 from "../../../assets/R2.png"
+import slide0 from "../../../assets/author-3.jpg"
+import slide1 from "../../../assets/auth1.jpg"
+import slide2 from "../../../assets/author-6.jpg"
 
 
 
@@ -21,10 +21,10 @@ const Testimonials = () => {
       
       <div className="shape_3">
         <div className="test_wrap p-5">
-          <div className="font-lato text-[15px] font-semibold text-[#fff] text-center pb-5">
-            <h5 className="">Review from clients</h5>
-            <h1 className="text-[30px] text-[#3bbca7] font-bold">
-              <span>Testi</span>monials{" "}<span className="color">.</span>
+          <div className="font-Hat text-[18px] font-semibold text-[#fff] text-center pb-5">
+            <h5 className="pr-4">Review from clients</h5>
+            <h1 className="text-[2rem] text-[#4db5ff] font-bold">
+              <span>Testi</span>monials{" "}<span className="color font-lato">.</span>
             </h1>
           </div>
 
@@ -91,7 +91,7 @@ const Testimonials = () => {
                 
                 <SwiperSlide>
                   <div className="single-testimonial-content">
-                    <p className="font-Roboto">
+                    <p className="font-Hat">
                       “ We are very content and happy wan all the work Russell
                       Khan has done for us! Not only did he just what he had to
                       do, comes up with suggestions and improvements of his owns
@@ -108,7 +108,7 @@ const Testimonials = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="single-testimonial-content">
-                    <p className="font-Roboto">
+                    <p className="font-Hat">
                       “ We are very content and happy wan all the work Russell
                       Khan has done for us! Not only did he just what he had to
                       do, comes up with suggestions and improvements of his owns
@@ -124,7 +124,7 @@ const Testimonials = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="single-testimonial-content">
-                    <p className="font-Roboto">
+                    <p className="font-Hat">
                       “ We are very content and happy wan all the work Russell
                       Khan has done for us! Not only did he just what he had to
                       do, comes up with suggestions and improvements of his owns

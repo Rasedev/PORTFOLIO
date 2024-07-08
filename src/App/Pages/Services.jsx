@@ -41,9 +41,9 @@ const Services = () => {
     <div id="services">
       {/* <div className="container sectio nav" style={{ position: "relative" }}> */}
       <div className="section nav " >
-          <h1 className="">WHAT SKILLS I HAVE</h1>
+          <h1 className="font-Hat font-normal">WHAT SKILLS I HAVE</h1>
          
-          <h3 className="span loader font-Roboto">
+          <h3 className="span loader font-Hat">
             <span className="m">B</span>
             <span className="m">E</span>
             <span className="m">N</span>
@@ -53,7 +53,7 @@ const Services = () => {
             <span className="m">T</span>
             <span className="m">S</span>
             <span className="m">&nbsp;</span>
-            <span className="m">o</span>
+            <span className="m">O</span>
             <span className="m">f</span>
             <span className="m">&nbsp;</span>
             <span className="m">T</span>
@@ -79,14 +79,14 @@ const Services = () => {
               {counters.map((counter, index) => (
                 <div key={index} className="item w-full md:w-1/4 p-5 md:mx-auto">
                   <div className="c-counter text-center">
-                    <span className="count-2 text-3xl font-bold">
+                    <span className="count-2 text-3xl font-bold font-Hat">
                       <CountUp
                         end={counter.value}
                         duration={2}
                         suffix={counter.suffix || " +"}
                       />
                     </span>
-                    <p className="text-[#fff] font-pops mt-2 ">{counter.text}</p>
+                    <p className="text-[#fff] font-Hat mt-2 ">{counter.text}</p>
                   </div>
                 </div>
               ))}

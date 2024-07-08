@@ -1,363 +1,5 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Rem:ital,wght@0,100..900;1,100..900&display=swap");
-:root {
-  --black: #00030a;
-  --white: #f0f0f0;
-  --cyan: #28effa;
-  --darkgray: rgb(22, 22, 22);
-}
 
- :root {
-  --real-height: 100vh;
-  --grid-edge: 60px;
-  --white: #f0f0f0;
-  --darkgray: rgb(22, 22, 22);
-}
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  transition: 0.3s;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar {
-  width: 7.5px;
-  height: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-} 
-
-#about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  justify-content: center;
-  background: url(../../assets/hero_bg.jpg);
-  background-repeat: no-repeat;
-  object-fit: cover;
-  text-align: justify;
-  color: #fff;
-  font: 400 1.4rem "Rem", sans-serif;
-}
-
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 800px;
-  padding: 2rem;
-  margin-top: 2rem;
-  border: 2px solid var(--white);
-}
-.wrapper:hover {
-  border: 2px solid black;
-  box-shadow: 1px 1px 4px #f0f0f020, 0 0 8px #f0f0f019;
-  background-color: transparent;
-}
-
-.about_circles_container {
-  position: absolute;
-  height: 100vh;
-  left: 28%;
-  top: 100%;
-  transform: translate(0%, 550px);
-  transition: opacity 0.3s ease-in-out;
-  width: 100vh;
-  z-index: 1;
-}
-
-.about_dotted_circles circle {
-  stroke: #00ffdb;
-  margin: 0 10px;
-}
-
-.about_dotted_circles {
-  animation: spin 120s linear infinite;
-  aspect-ratio: 1/1;
-  height: 85%;
-  left: 46%;
-  opacity: 0.9;
-  position: absolute;
-  top: -3%;
-  transform: translate(-50%, -50%);
-}
-
-.about_dotted_circles svg {
-  height: 100%;
-  overflow: visible;
-  width: 100%;
-  will-change: transform;
-}
-
-.about_dotted_circles:nth-child(2) {
-  animation-direction: reverse;
-  height: 110%;
-  opacity: 0.7;
-}
-
-.about_dotted_circles:nth-child(3) {
-  height: 135%;
-  opacity: 0.6;
-}
-
-.svgDottedCircles {
-  translate: none;
-  rotate: none;
-  scale: none;
-  transform: translate3d(0px, 0px, 0px) rotate(60deg);
-}
-
-.wrapper.off {
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.wrapper.show {
-  opacity: 1;
-}
-
-
-
-== Animate on Scroll ==
-
-.off {
-  opacity: 0;
-  transform: translateX(-25%);
-}
-.show {
-  animation: appear 1s ease-out;
-  animation-fill-mode: forwards;
-}
-
- @keyframes spin {
-  100% {
-    transform: translate(-50%, -50%) rotate(1turn);
-    
-  }
-} 
-
-======= Animations =========
-@keyframes drop {
-  0% {
-    transform: translateY(-200px);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: translateY(0), scale(1);
-  }
-}
-@keyframes appear {
-  0% {
-    transform: translateX(-25%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-@keyframes prevAnimation {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  40% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes nextAnimation {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  40% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-
- 
-@media only screen and (max-width: 575.98px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 1rem;
-  }
-
-  .img-container {
-    width: 100%;
-    height: auto;
-  }
-
-  .profile-img {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .about_circles_container {
-    position: absolute;
-    height: 50vh;
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, 655px);
-    transition: opacity 0.3s ease-in-out;
-    width: 90%;
-    z-index: 1;
-  }
-
-  .about_dotted_circles {
-    animation: spin 120s linear infinite;
-    aspect-ratio: 1/1;
-    height: 50%;
-    left: 50%;
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    transform: translate(-50%, -50%);
-  }
-
-  .about_dotted_circles:nth-child(2) {
-    height: 70%;
-    opacity: 0.7;
-  }
-
-  .about_dotted_circles:nth-child(3) {
-    height: 90%;
-    opacity: 0.6;
-  }
-  #about{
-    background-repeat: repeat;
-  }
-  .svgDottedCircles {
-    translate: none;
-    rotate: none;
-    scale: none;
-    transform: translate(none);
-  }
-  @keyframes spin {
-    100% {
-      transform: translate(-50%, -50%) rotate(1turn);
-     
-      }
-      }
-
-    }
-       
-
-
-@media (min-width: 576px) and (max-width: 734px) {
-  
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 1rem;
-  }
-
-  .img-container {
-    width: 100%;
-    height: auto;
-  }
-
-  .profile-img {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .about_circles_container {
-    position: absolute;
-    height: 50vh;
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, 655px);
-    transition: opacity 0.3s ease-in-out;
-    width: 49vh;
-    z-index: 1;
-  }
-
-  .about_dotted_circles {
-    animation: spin 120s linear infinite;
-    aspect-ratio: 1/1;
-    height: 50%;
-    left: 50%;
-    opacity: 0.9;
-    position: absolute;
-    top: 0;
-    transform: translate(-50%, -50%);
-  }
-
-  .about_dotted_circles:nth-child(2) {
-    height: 70%;
-    opacity: 0.7;
-  }
-
-  .about_dotted_circles:nth-child(3) {
-    height: 90%;
-    opacity: 0.6;
-  }
-  #about{
-    background-repeat: repeat;
-  }
-  @keyframes spin {
-    100% {
-      transform: translate(none);
-    }
-  }
-
-}
- 
- */
-
-
-
- @import url("https://fonts.googleapis.com/css2?family=Rem:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 :root {
   --black: #00030a;
   --white: #f0f0f0;
@@ -413,7 +55,7 @@ html {
   background-size: cover;
   text-align: justify;
   color: #fff;
-  font: 400 1.4rem "Rem", sans-serif;
+  font: 400 1.4rem "Hat", sans-serif;
   overflow: hidden; /* Hide scrollbar */
 }
 
@@ -436,15 +78,19 @@ html {
 
 .profile-img {
   position: absolute;
-  top: 46%;
-  left: 48%;
-  transform: translate(-100%, -45%);
-  width: 345px;
-  height: 580px;
-  object-fit: cover;
+    top: 39%;
+    left: 48%;
+    transform: translate(-100%, -45%);
+    width: 350px;
+    height: 480px;
+    object-fit: cover;
+    /* border-radius: 10px; */
+    /* filter: invert(100%) sepia(100%) saturate(1) hue-rotate(180deg); */
+    /* filter: grayscale(100%) brightness(0.5); */
+    background: linear-gradient(90deg, var(--white), var(--black) 100%);
 }
 
-.about_circles_container {
+/* .about_circles_container {
   position: absolute;
   height: 100vh;
   left: 28%;
@@ -494,7 +140,7 @@ html {
   rotate: none;
   scale: none;
   transform: translate3d(0px, 0px, 0px) rotate(60deg);
-}
+} */
 
 .wrapper.off {
   opacity: 0;
@@ -504,8 +150,15 @@ html {
 .wrapper.show {
   opacity: 1;
 }
+.about-button-class { 
+  top: 90% ;
+  left: 23% ;
+  overflow: hidden;
+
+}
 
 /* == Animate on Scroll == */
+
 .off {
   opacity: 0;
   transform: translateX(-25%);
@@ -522,6 +175,7 @@ html {
 }
 
 /* ======= Animations ========= */
+
 @keyframes drop {
   0% {
     transform: translateY(-200px);
@@ -630,6 +284,15 @@ html {
       transform: translate(none);
     }
   }
+
+  .about-button-class {
+    position: absolute;
+    top: 105% !important;
+    left: 40% !important;
+    overflow: hidden;
+    width: 100%;
+  
+}
 }
 
 @media (min-width: 576px) and (max-width: 768px) {

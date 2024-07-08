@@ -8,12 +8,16 @@
     --test-width-sm: 90%;
 }
 #contact{
-    background:linear-gradient(#00000080, #00000080), url(../../../assets/contactsd.png);
+    /* background:linear-gradient(#00000080, #00000080), url(../../../assets/contactsd.png); */
+    background: linear-gradient(360deg, #00000080, #00000080), url(/src/assets/contactsd.png);
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
     background-size: cover;
     padding: 50px 8%;
+    /* filter: grayscale(100%) brightness(3); */
+    z-index: -1;
+    
 }
 .test {
   width:var(--test-width-lg);
@@ -31,29 +35,39 @@
     flex-direction: column;
     gap: 1.2rem;
   }
+  /* .contact__options:hover {
+    box-shadow: 6px 5px 13px -6px #0000002e;
+    margin-right: -10px;
+   
+  } */
   .contact__option {
     background: transparent;
     color: #fff;
     padding: 1.2rem;
     border-radius: 1.2rem;
     text-align: center;
-    border: 1px solid var(--color-primary-variant);
+    /* border: 1px solid var(--color-primary-variant); */
+    border: 1px solid  hsla(0, 0%, 100%, .4);;
     transition: var(--transition);
   }
   .contact__option:hover {
-    background: transparent;
+    background: #4db5ff;
     border-color: var(--color-primary-variant);
+    box-shadow: 6px 5px 13px -6px #fffcfc;
+    /* margin-top: -20px; */
   }
   .contact__option-icon {
     font-size: 1.5rem;
     margin: 1rem auto;
-    color: #3498db ;
+    /* color: #3498db ; */
+    color: #ffffff ;
   }
   .contact__option a {
     margin-top: 0.7rem;
     display: inline-block;
     font-size: 0.8rem;
-    color: var(--color-primary);
+    color: #fff;
+    /* color: var(--color-primary); */
   }
   /* ================ FORM ================= */
   
@@ -61,16 +75,20 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    flex-wrap: wrap-reverse;
+    width: 100%;
   }
   input,
   textarea {
-    width: 100%;
+    /* width: 400px; */
     padding: 1.5rem !important;
     /* border-radius: 0.5rem; */
     background: transparent;
-    border-bottom: 1px solid var(--color-primary-variant);
+    /* border-bottom: 1px solid var(--color-primary-variant); */
+    border-bottom: 1px solid  hsla(0, 0%, 100%, .4);;
     resize: none;
     color: #fff;
+    outline: none;
   }
   #contact h5{
     color: #fff;
@@ -82,12 +100,41 @@
   
   #contact h1{
     font-size: 2rem;
-    font-weight: 500;
-    color: var(--color-primary);
+    font-weight: 700;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 3rem;
   }
-  
+
+
+
+
+
+
+
+  @media only screen and (max-width: 575.98px) {
+    #contact{
+      padding-bottom: 90px;
+    }
+    #contact h5{
+      padding-top: 100px;
+    }
+    .contact__options{
+      width: 270px;
+    }
+     .contact-button-class{
+      top: 15% !important;
+      left: 16% !important;
+     }
+     .contact__option:hover{
+      background: #4db5ff;
+     }
+     .form{
+      width: 100%;
+     }
+  }
+
+
   /* ================ MEDIA QUERIES (MEDIUM DEVICES) ============= */
   
   @media screen and (max-width: 1024px) {
@@ -100,94 +147,7 @@
   @media screen and (max-width: 600px) {
     .contact__test {
       width: var(--container-width-sm);
-    }
-  }
-  
-
-  /* Button-4 */
-
-  .button-container-4{
-    position: relative;
-    width: 250px;
-    height: 50px;    
-    margin-top: 8vh;
-    overflow: hidden;
-    border: 1px solid #4db5ff;
-    transition: 0.5s;    
-  }
-  .button-container-4 button {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid #4db5ff ;
-    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
-    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
-    -webkit-mask-size: 2300% 100%;
-    mask-size: 2300% 100%;
-    -webkit-animation: ani2 0.7s steps(22) forwards;
-    animation: ani2 0.7s steps(22) forwards;
-  }
-  .button-container-4 button:hover{
-  background: #4db5ff!important;
-  -webkit-animation: ani 0.7s steps(22) forwards;
-  animation: ani 0.7s steps(22) forwards;
-  color: #fff !important;
-  }
-  
-  .contact_mas {
-    color: #4db5ff;
-    position: absolute;
-    top: 28%;
-    text-align: center;
-    width: 100%;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 1px;   
-  }
-
-  @-webkit-keyframes ani {
-    from {
-      -webkit-mask-position: 0 0;
-      mask-position: 0 0;
-    }
-    to {
-      -webkit-mask-position: 100% 0;
-      mask-position: 100% 0;
-    }
-  }
-  
-  @keyframes ani {
-    from {
-      -webkit-mask-position: 0 0;
-      mask-position: 0 0;
-    }
-    to {
-      -webkit-mask-position: 100% 0;
-      mask-position: 100% 0;
-    }
-  }
-  
-  @-webkit-keyframes ani2 {
-    from {
-      -webkit-mask-position: 100% 0;
-      mask-position: 100% 0;
-    }
-    to {
-      -webkit-mask-position: 0 0;
-      mask-position: 0 0;
-    }
-  }
-  
-  @keyframes ani2 {
-    from {
-      -webkit-mask-position: 100% 0;
-      mask-position: 100% 0;
-    }
-    to {
-      -webkit-mask-position: 0 0;
-      mask-position: 0 0;
+      padding: 0rem !important;
     }
   }
   

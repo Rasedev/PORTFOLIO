@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import "./Portfolio.css";
-//import { VscGithubInverted } from "react-icons/vsc";
-
 import img from "../../../assets/Brigate.jpeg";
 import travel from "../../../assets/Pi.jpeg";
 import img2 from "../../../assets/Reobiz.jpeg";
@@ -202,10 +200,10 @@ const Portfolio = () => {
   return (
     <div id="portfolio">
       <div className="container">
-        <h2 className="font-lato text-[30px] font-bold text-[#FFF] text-center pb-[20px]">
-          My Recent Work<span className="color">.</span>
+        <h2 className="font-Hat text-[2rem] font-bold text-[#FFF] text-center pb-[20px]">
+          My Recent Work<span className="color font-lato">.</span>
         </h2>
-        <div className="grid grid-col-span md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6 p-5">
+        <div className="grid grid-col-span md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-[2rem] p-5">
           {portfolioItems.map((item) => (
             <div key={item.id} className="portfolio-box ">
               <div
@@ -230,7 +228,7 @@ const Portfolio = () => {
                 <div className="inner">
                   <h3 className="">{item.title}</h3>
                   <div className=" flex gap-4 mt-4">
-                    <div className="button-container-1">
+                    <div className="portfolio_btn">
                       <span
                         href={item.github}
                         className="mas"
@@ -241,7 +239,7 @@ const Portfolio = () => {
                       </span>
                       <button id="work" type="button" name="Hover"></button>
                     </div>
-                    <div className="button-container-1">
+                    <div className="portfolio_btn">
                       <span
                         href={item.demo}
                         className="mas"

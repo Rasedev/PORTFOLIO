@@ -1,7 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* Services.css */
-
-
 
 #services {
   align-items: center; 
@@ -23,19 +22,18 @@
 } 
 
 .nav h1 {
-  font-family: "Josefin Sans", sans-serif;
   font-size: 5.2vw;
   margin: 0;
   padding-bottom: 0.5rem;
-  letter-spacing: 0.5rem;
-  color: #03dac6;
+  letter-spacing: 0.6rem;
+  color: #FFF;
   transition: all 0.3s ease;
   z-index: 3;
   
 }
 .nav h1:hover {
   transform: translate3d(0, -10px, 22px);
-  color: #ff0266;
+  color: #4db5ff;
 }
 
 h3.span {
@@ -84,8 +82,8 @@ h3.span {
 
 @keyframes loading {
   to {
-    text-shadow: 20px 0 70px #ff0266;
-    color: #ff0266;
+    text-shadow: 20px 0 70px #ffffff;
+    color: #ffffff;
   }
 }
 .loader span:nth-child(2) {
@@ -181,9 +179,21 @@ h3.span {
   padding: 20px;
   border-radius: 8px;
 }
-
-.count-2 {
-  color: #fff; 
+.c-counter:hover .count-2 {
+  /* box-shadow: 6px 5px 13px -6px #5655552e; */
+    /* margin-top: -10px; */
+    color: #4db5ff !important;
+    margin-left: -10px;
+}
+.c-counter:hover p {
+    color: #4db5ff !important;
+    margin-left: -10px;
+}
+.count-2{
+  color: #fff !important; 
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
 }
 
 
@@ -195,33 +205,38 @@ h3.span {
 #services { 
   background-repeat: repeat;
   object-fit: cover;
-  padding: 30px 5%;
+  padding: 50px 5%;
  
 }
  .nav{
   text-align: center;
   padding: 0 0em;
 } 
-
+.nav h1 {
+  font-size: 5.2vw;
+  font-weight: 700;
+  letter-spacing: 0.4rem; 
+  padding-bottom: 0.5rem;
+}
 .nav h1:hover {
   transform: translate3d(0, -10px, 22px);
-  color: #ff0266;
+  color: #ffffff;
 }
 
 h3.span {
   width: 100%;
-  font-size: 6vw;
+  font-size: 4vw;
   text-align: center;
   letter-spacing: 0.3em;
-  font-weight: 400;
+  font-weight: 600;
   
 }
 
   .nav h2 {
-    font-size: 2vw;
-    letter-spacing: 0.2vw;
-    padding-bottom: 35px;
-    padding-top: 15px;
+    font-size: 5vw;
+    letter-spacing: 0.5vw;
+    padding-bottom: 0px;
+    padding-top: 5px;
   }
   .s_count {
     width: 100%;
@@ -236,7 +251,7 @@ h3.span {
 .loader span {
   color: #faebd7;
   font-weight: 500;
-  font-size: 2vw;
+  font-size: 4vw;
   text-shadow: 0 0 0 #faebd7;
   -webkit-animation: loading 1s ease-in-out infinite alternate;
   animation: loading 1s ease-in-out infinite alternate;
@@ -245,12 +260,12 @@ h3.span {
 
 }
 
-@keyframes loading {
+/* @keyframes loading {
   to {
     text-shadow: 20px 0 70px #ff0266;
     color: #ff0266;
   }
-}
+} */
 
 
 @media (min-width: 576px) and (max-width: 768px) {

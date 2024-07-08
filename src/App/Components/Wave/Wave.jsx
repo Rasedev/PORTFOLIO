@@ -122,7 +122,7 @@
 import './Wave.css';
 import React, { useEffect } from 'react';
 import * as THREE from 'three';
-import Animation from "../Animation/Animation";
+
 
 const Wave = () => {
   useEffect(() => {
@@ -232,7 +232,7 @@ const Wave = () => {
   return (
     <div className='wave-container'>
       
-      <Animation/>
+     
       <canvas id="canvas"></canvas>
     </div>
     

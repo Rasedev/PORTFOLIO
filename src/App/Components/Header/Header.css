@@ -1,8 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:900'); */
-
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
-
-
+/* @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
 .navbar {
   position: fixed;
@@ -14,53 +10,192 @@
   left: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: var(--navbar-padding, 1.1rem) !important;
-  /* border-bottom: 0.1px solid #e5e5e5; */
-  /* background:linear-gradient(90deg, rgb(250, 255, 255), transparent, rgb(240, 240, 240)); */
-  /* background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%, transparent); */
-}
-.live {
-  font-size: 3.5vw;
-  line-height: 4vw;
-  margin: 0;
-  font-weight: 900;
-  background: url(https://raw.githubusercontent.com/s1mpson/-/master/codepen/black-lives-matter/victim-collage.png);
-  background-size: 40%;
-  background-position: 50% 50%;
-  -webkit-background-clip: text;
-  color: rgba(0,0,0,0.08);
-  animation: zoomout 10s ease 500ms 1;
 }
 
-@keyframes zoomout {
-  from {
-    background-size: 40%;
-  }
-  to {
-    background-size: 10%;
-  }
+.dropdown-menu {
+  align-items: baseline;
+  display: block;
+  position: fixed;
+  overflow-x: auto;
+  transition: transform 0.6s ease;
+  transform: translateX(-100%);
 }
 
+.dropdown-menu.open {
+  transform: translateX(0);
+  transition: transform 0.6s ease;
+}
 
-.blend_2{
-  mix-blend-mode: difference;
-  z-index: 3;
-  filter: invert(1);
-  padding:0px 10px;
-  font-size: 2vw;
-  font-family: tahoma;
+@media only screen and (max-width: 575.98px) {
+  .navbar {
+    width: 100% !important;
+    position: absolute;
   }
-
-
-
-@media (min-width: 576px) {
-    .menu {
-        width: 100%;
-        max-width: 32rem;
-    }
+  .dropdown-menu {
+    left: -160px;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 768px) {
-  .dropdown{
+  .dropdown-menu {
     left: 63px; 
   }
+} */
+
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding:  1.1rem !important;
+}
+.navbar-start {
+  width: 30% !important;
+  
+}
+.dropdown-menu {
+  display: block;
+  position: fixed;
+  right: -20rem; 
+  top: 0;
+  width: 20rem;
+  height: 100vh;
+  background-color: rgba(13, 13, 13, 0.74);
+  transition: right 0.6s ease; 
+  z-index: 10;
+  overflow: hidden;
+  padding: 5.2rem 2.6rem 1.3rem 2rem;
+}
+
+.dropdown-menu.open {
+  right: 0;
+}
+.menu-item{
+  margin-bottom: 4.4vmin
+}
+.Header-button-class{
+  top: 88% !important;
+    left: 82% !important;
+    transform: translate(-100%, -100%) !important;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .navbar {
+    width: 100% !important;
+    position: absolute;
   }
+  .navbar-start {
+    width: 60%;
+    
+}
+.navbar-title {
+ font-size: 7vw;
+  
+}
+  .dropdown-menu {
+    right: -20rem;
+    overflow: hidden;
+    height: 112vh;
+    width: 100%;
+  }
+  .dropdown-menu.open {
+    right: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .dropdown-menu {
+    right: -20rem;
+  }
+  .dropdown-menu.open {
+    right: 0;
+  }
+} */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.1rem !important;
+}
+
+.navbar-start {
+  width: 30% !important;
+}
+
+.dropdown-menu {
+  display: block;
+  position: fixed;
+  right: -100%; /* Move the menu completely out of view initially */
+  top: 0;
+  width: 20rem;
+  height: 100vh;
+  background-color: rgba(13, 13, 13, 0.74);
+  transition: right 0.6s ease; /* Smooth transition for right property */
+  z-index: 10;
+  padding: 5.2rem 2.6rem 1.3rem 2rem;
+}
+
+.dropdown-menu.open {
+  right: 0; /* Bring the menu into view when open */
+}
+
+.menu-item {
+  margin-bottom: 4.4vmin;
+}
+
+.Header-button-class {
+  top: 88% !important;
+  left: 82% !important;
+  transform: translate(-100%, -100%) !important;
+}
+
+@media only screen and (max-width: 575.98px) {
+  .navbar {
+    width: 100% !important;
+    position: absolute;
+  }
+
+  .navbar-start {
+    width: 60%;
+  }
+
+  .navbar-title {
+    font-size: 7vw;
+  }
+
+  .dropdown-menu {
+    right: -100%; /* Ensure menu is completely out of view initially */
+    overflow: hidden;
+    height: 112vh;
+    width: 100%;
+  }
+
+  .dropdown-menu.open {
+    right: 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .dropdown-menu {
+    right: -100%;
+  }
+
+  .dropdown-menu.open {
+    right: 0;
+  }
+}

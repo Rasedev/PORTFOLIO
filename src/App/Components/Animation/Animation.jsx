@@ -20,7 +20,7 @@ const Animation = () => {
         y="0px"
         viewBox="200 95 550 600"
         xmlSpace="preserve"
-        style={{ width: "100%", height: "80%" }}
+      //  style={{ width: "100%", height: "80%" }}
       >
         <g>
           <rect
